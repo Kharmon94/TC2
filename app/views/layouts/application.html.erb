@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Take Care NYC</title>
+    <title>Take Care NY</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://checkout.stripe.com/checkout.js"></script>
   </head>
@@ -17,7 +18,7 @@
           <nav id="nav" style="margin-bottom: 5%; background-color: white">
 
                 <div class="nav-wrapper">
-                  <a href="#!" class="brand-logo" style="background-color:rgba(0, 0, 0, 0.0);"><%= image_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png', :style => 'width: 60px; height: auto; margin:11%;' %></a>
+                  <a href="#!" class="brand-logo" style="background-color:rgba(0, 0, 0, 0.0);"><%= image_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png', :style => 'width: 70px; height: auto; ' %></a>
                   <a href="/" data="no-turbolink" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style="color: black">menu</i></a>
                   <ul class="right hide-on-med-and-down">
 
@@ -30,8 +31,7 @@
 
                           <li ><%=link_to 'Contact', new_contact_path, :style => "text-decoration: none; color: black;" %></li>
 
-                       <!--    <li><#%= render 'layouts/cart_text' %></li> -->
-
+                      
                   </ul>
                 </div>
           
