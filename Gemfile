@@ -21,6 +21,7 @@ gem 'activeadmin'
 # Design
 gem 'materialize-sass'
 gem 'mini_racer'
+gem "active_material", github: "vigetlabs/active_material"
 
 # Images
 gem 'mini_magick', '~> 4.8'
