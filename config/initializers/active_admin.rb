@@ -4,7 +4,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Big Facts Podcast"
+  config.site_title = "Take Care NY"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
@@ -16,7 +16,7 @@ ActiveAdmin.setup do |config|
   #
   # Note: Aim for an image that's 21px high so it fits in the header.
   #
-  # config.site_title_image = "logo.png"
+  config.site_title_image = "logo.png"
 
   # == Default Namespace
   #
@@ -68,6 +68,11 @@ ActiveAdmin.setup do |config|
   # the name of default policy class. This policy will be used in every
   # case when Pundit is unable to find suitable policy.
   # config.pundit_default_policy = "MyDefaultPunditPolicy"
+
+  # If you wish to maintain a separate set of Pundit policies for admin
+  # resources, you may set a namespace here that Pundit will search
+  # within when looking for a resource's policy.
+  # config.pundit_policy_namespace = :admin
 
   # You can customize your CanCan Ability class name here.
   # config.cancan_ability_class = "Ability"
@@ -147,11 +152,21 @@ ActiveAdmin.setup do |config|
   #
   # config.before_action :do_something_awesome
 
+  # == Attribute Filters
+  #
+  # You can exclude possibly sensitive model attributes from being displayed,
+  # added to forms, or exported by default by ActiveAdmin
+  #
+  config.filter_attributes = [:encrypted_password, :password, :password_confirmation]
+
   # == Localize Date/Time Format
   #
   # Set the localize format to display dates and times.
   # To understand how to localize your app with I18n, read more at
-  # https://github.com/svenfuchs/i18n/blob/master/lib%2Fi18n%2Fbackend%2Fbase.rb#L52
+  # https://guides.rubyonrails.org/i18n.html
+  #
+  # You can run `bin/rails runner 'puts I18n.t("date.formats")'` to see the
+  # available formats in your application.
   #
   config.localize_format = :long
 
@@ -276,6 +291,13 @@ ActiveAdmin.setup do |config|
   # of those filters by default here.
   #
   # config.include_default_association_filters = true
+
+  # == Head
+  #
+  # You can add your own content to the site head like analytics. Make sure
+  # you only pass content you trust.
+  #
+  # config.head = ''.html_safe
 
   # == Footer
   #
