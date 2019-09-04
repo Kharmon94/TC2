@@ -13,5 +13,31 @@ ActiveAdmin.register Post do
     end
     f.actions
   end
+
+  show do
+    attributes_table do
+
+      row :title
+      row :description
+      row :subtitle
+
+      row :headline_picture do |head|
+        image_tag url_for(head.headline_picture)
+      end
+
+      row "Images" do
+         ul do
+          post.images.each do |img|
+            li do 
+              image_tag url_for(img.images)
+            end
+          end
+         end
+      end
+
+    end
+  end
+
+
   
 end

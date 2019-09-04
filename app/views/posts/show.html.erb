@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
+	
+<p>
+	<strong>Headline</strong>
+	<%= image_tag(@post.headline_picture, :style => "width: 100px; height: auto;") %>
+</p>
 
 <p>
   <strong>Title:</strong>
@@ -9,6 +14,23 @@
   <strong>Description:</strong>
   <%= @post.description %>
 </p>
+
+<p>
+	<strong>Subtitle:</strong>
+	<%= @post.subtitle %>
+</p>
+
+<!-- <p>
+	<strong>Images:</strong>
+
+	<div style="width: 100px; height: auto">
+		<#% (0...@post.images.count).each do |image| %>
+		  <#%= image_tag(@post.images[image], :style => "width: 100%; height: auto") %>
+		<#% end %>
+	</div>
+</p>
+ -->
+
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
