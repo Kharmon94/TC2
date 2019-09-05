@@ -316,5 +316,5 @@ ActiveAdmin.setup do |config|
   # config.order_clause = MyOrderClause
 
   #comments resource
-  config.comments = false
+  # config.comments = false
 end
