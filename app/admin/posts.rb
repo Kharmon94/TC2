@@ -3,6 +3,10 @@ ActiveAdmin.register Post do
 
   permit_params :title, :subtitle, :description, :images, :headline_picture
 
+  filter :title, :as => :string
+  filter :subtitle, :as => :string
+  filter :description, :as => :text
+
   form do |f|
     f.inputs do
       f.input :title
