@@ -159,6 +159,8 @@ ActiveAdmin.setup do |config|
   #
   config.filter_attributes = [:encrypted_password, :password, :password_confirmation]
 
+  
+
   # == Localize Date/Time Format
   #
   # Set the localize format to display dates and times.
