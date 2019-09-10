@@ -22,7 +22,7 @@ gem 'activeadmin'
 gem 'materialize-sass'
 gem 'mini_racer'
 gem "active_material", github: "vigetlabs/active_material"
-# gem 'arctic_admin'
+
 
 # Images
 gem 'mini_magick', '~> 4.8'

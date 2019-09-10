@@ -34,7 +34,11 @@ class ContactsController < InheritedResources::Base
       	:shoe_model, 
       	:shoe_size, 
       	:shoe_type, 
-      	:service_type
+      	:service_type,
+        :front_picture,
+        :back_picture,
+        :left_picture,
+        :right_picture
       	)
     end
 end

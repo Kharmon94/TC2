@@ -81,6 +81,27 @@
     <%= form.text_area :description %>
   </div>
 
+  <div class="field">
+    <%= form.label :front_picture %>
+    <%= form.file_field :front_picture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :back_picture %>
+    <%= form.file_field :back_picture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :left_picture %>
+    <%= form.file_field :left_picture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :right_picture %>
+    <%= form.file_field :right_picture %>
+  </div>
+
+
   <div class="actions">
     <%= form.submit %>
   </div>

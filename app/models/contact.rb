@@ -13,6 +13,20 @@ class Contact < MailForm::Base
   attribute :shoe_size, :validate => true
   attribute :shoe_model, :validate => true
   attribute :service_type, :validate => true
+  attributes :front_picture, :attachment => true
+  attributes :back_picture, :attachment => true
+  attributes :left_picture, :attachment => true
+  attributes :right_picture, :attachment => true
+
+  # has_one_attached :front_picture
+  # has_one_attached :back_picture
+  # has_one_attached :left_picture
+  # has_one_attached :right_picture
+
+  # validates :front_picture, presence: true, blob: { content_type: :image }
+  # validates :back_picture, presence: true, blob: { content_type: :image }
+  # validates :left_picture, presence: true, blob: { content_type: :image }
+  # validates :right_picture, presence: true, blob: { content_type: :image }
 
   def headers
     {
