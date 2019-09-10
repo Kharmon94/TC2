@@ -8,4 +8,3 @@
 AdminUser.create!(email: 'Takecareny96@gmail.com', password: 'Guest613*', password_confirmation: 'Guest613*') if Rails.env.development?
 # Spree::Core::Engine.load_seed if defined?(Spree::Core)
 # Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
