@@ -18,21 +18,15 @@ class Contact < MailForm::Base
   attributes :left_picture, :attachment => true
   attributes :right_picture, :attachment => true
 
-  # has_one_attached :front_picture
-  # has_one_attached :back_picture
-  # has_one_attached :left_picture
-  # has_one_attached :right_picture
-
-  # validates :front_picture, presence: true, blob: { content_type: :image }
-  # validates :back_picture, presence: true, blob: { content_type: :image }
-  # validates :left_picture, presence: true, blob: { content_type: :image }
-  # validates :right_picture, presence: true, blob: { content_type: :image }
 
   def headers
     {
       :subject => "Service Request",
-      :to => "thronetechnology@gmail.com",
+      :to => "takecareny96@gmail.com",
       :from => %("#{first_name}" <#{email}>)
     }
   end
+
+  # Takecareny96@gmail.com
+  # thronetechnology@gmail.com
 end
