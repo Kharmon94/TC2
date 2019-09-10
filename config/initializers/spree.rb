@@ -15,6 +15,7 @@ Spree.config do |config|
 #   # config.track_inventory_levels = false
 
 	config.admin_interface_logo = 'https://takecareassets.s3.amazonaws.com/logo_white.png'
+	
 
 
 # 	attachment_config.each do |key, value|

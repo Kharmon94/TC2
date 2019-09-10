@@ -1,1 +1,1 @@
-//= require arctic_admin/base
+//= require active_material
