@@ -13,9 +13,21 @@
 //= require rails-ujs
 //= require activestorage
 //= require materialize
+//= require jquery
 //= require turbolinks
 //= require_tree .
 
+	$(document).ready(function(){    
+	    //Check if the current URL contains '#'
+	    if(document.URL.indexOf("#")==-1){
+	        // Set the URL to whatever it was plus "#".
+	        url = document.URL+"#";
+	        location = "#";
+
+	        //Reload the page
+	        location.reload(true);
+	    }
+	});
 
  $(document).on('turbolinks:load', function(){
 
@@ -24,5 +36,7 @@
 	    var instances = M.Sidenav.init(elems, options);
 	    var options = {}
 	  });
+
+	 AOS.init();
 
  })

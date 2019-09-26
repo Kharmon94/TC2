@@ -1,4 +1,5 @@
 <%= form_with(model: contact, local: true) do |form| %>
+<div class="row" id="error_explanation_row">
   <% if contact.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
@@ -10,99 +11,193 @@
       </ul>
     </div>
   <% end %>
+</div>
 
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+<div class="row" >
+  <div class="col s5" style="margin-right: 15%; border-left: solid; border-color: white; border-width: 2px">
+
+    <div class="field">
+      <%= form.label :first_name, style: "color: white;" %>
+      <%= form.text_field :first_name, style: "color: white;" %>
+    </div>
+    
+    <div class="field">
+      <%= form.label :last_name, style: "color: white;" %>
+      <%= form.text_field :last_name, style: "color: white;" %>
+    </div>
+
+    <div class="field">
+        <%= form.label :email, style: "color: white;" %>
+        <%= form.email_field :email, style: "color: white;" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :phone_number, style: "color: white;" %>
+      <%= form.telephone_field :phone_number, style: "color: white;" %>
+    </div>
+
   </div>
 
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+  <div class="col s5" style="border-left: solid; border-color: white; border-width: 2px">
+    <div class="field">
+      <%= form.label :address, style: "color: white;" %>
+      <%= form.text_field :address, style: "color: white;" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :city, style: "color: white;" %>
+      <%= form.text_field :city, style: "color: white;" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :state, style: "color: white;" %>
+      <%= form.text_field :state, style: "color: white;" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :zip, style: "color: white;" %>
+      <%= form.text_field :zip, style: "color: white;" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :country, style: "color: white;" %>
+      <%= form.country_select :country, {priority_countries: ["US"], include_blank: "Select Country"}, class: 'form-control' %>
+    </div>
+  </div>
+  
+</div>
+
+<div class="row" style="margin-top: 10%">
+  <div class="col s5">
+    <h3><strong>SHOE DETAILS</strong></h3>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col s6" style="border-left: solid; border-color: white; border-width: 2px">
+    <div class="field" style="margin-bottom: 2%">
+      <%= form.label :shoe_size, style: "color: white;" %>
+      <%= form.select :shoe_size, [
+
+        'Infant/toddler', 
+        'Children', 
+        '4 - 4.5',
+        '5 - 5.5',
+        '6 - 6.5',
+        '7 - 7.5',
+        '8 - 8.5',
+        '9 - 9.5',
+        '10 - 10.5',
+        '11 - 11.5',
+        '12 - 12.5',
+        '13 - 13.5',
+        '14 - 14.5',
+        '15 - 15.5',
+        '16 - 16.5',
+        '17 - 17.5',
+        '18 - 18.5'
+
+        ] %>
+    </div>
+
+    <div class="field" style="margin-bottom: 2%">
+      <%= form.label :gender, style: "color: white;" %>
+      <%= form.select :gender, ['Mens', 'Womans'] %>
+    </div>
+
+    <div class="field" style="margin-bottom: 2%">
+      <%= form.label :shoe_type, style: "color: white;" %>
+      <%= form.select :shoe_type, ['Sneaker', 'Boot', 'Slipper', 'Traditional', 'High-Heeled'] %>
+    </div>
+
+    <div class="field" style="margin-bottom: 2%">
+      <%= form.label :shoe_model, style: "color: white;" %><br>
+      <i style="font-size: 10px">*Example: Air Jordan 1</i>
+      <%= form.text_field :shoe_model, style: "color: white" %>
+    </div>
+
+  </div>
+  <div class="col s6">
+
+    <div class="field" style="margin-bottom: 2%">
+      <%= form.label :service_type, style: "color: white;" %>
+      <%= form.select :service_type, ['Restoration', 'Custom'] %>
+    </div>
+
+    <div class="field" style="margin-bottom: 2%">
+      <%= form.label :description, style: "color: white;" %>
+      <%= form.text_area :description, style: "height: 112px; color: white;" %>
+    </div>
+  </div>
+    
+
+
+</div>
+
+<div class="row" style="margin-top: 10%;">
+  <div class="row">
+    <h3><strong>SHOE IMAGES</strong></h3>
+  </div>
+</div>
+  <div class="row" align="center">
+
+    <div class="row" align="center">
+      <div>
+        <div class="col s3" style="border: solid; border-width: 5px; border-color: white; border-radius: 10px; height: 175px; padding: 10px; margin: 15px; width: 255px">
+          <div>
+            <img src="https://takecareassets.s3.amazonaws.com/top.png" style="width: 125px; height: auto; margin-top: 1%">
+          </div>
+          <div class="field" style="margin-top: 10px;">
+            <%= form.file_field :front_picture, class: "btn waves-effect waves-light", style: "background-color: blue; color: black; width:225px;" %>
+          </div>
+        </div>
+
+        <div class="col s3" style="border: solid; border-width: 5px; border-color: white; border-radius: 10px; height: 175px; padding: 10px; margin: 15px; width: 255px">
+          <div>
+            <img src="https://takecareassets.s3.amazonaws.com/bottom.png" style="width: 125px; height: auto; margin-top: 1%">
+          </div>
+          <div class="field" style="margin-top: 10px;">
+            <%= form.file_field :back_picture, class: "btn waves-effect waves-light", style: "background-color: yellow; color: black; width:225px;" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="col s3" style="border: solid; border-width: 5px; border-color: white; border-radius: 10px; height: 175px; padding: 10px; margin: 15px; width: 255px">
+          <div>
+            <img src="https://takecareassets.s3.amazonaws.com/left.png" style="width: 125px; height: auto; margin-top: 1%">
+          </div>
+          <div class="field" style="margin-top: 10px;">
+            <%= form.file_field :left_picture, class: "btn waves-effect waves-light", style: "background-color: green; color: black; width:225px;" %>
+          </div>
+        </div>
+
+        <div class="col s3" style="border: solid; border-width: 5px; border-color: white; border-radius: 10px; height: 175px; padding: 10px; margin: 15px; width: 255px">
+          <div>
+            <img src="https://takecareassets.s3.amazonaws.com/right.png" style="width: 125px; height: auto; margin-top: 1%">
+          </div>
+          <div class="field" style="margin-top: 10px;">
+            <%= form.file_field :right_picture, class: "btn waves-effect waves-light", style: "background-color: red; color: black; width:225px;" %>
+          </div>
+        </div> 
+      </div>
+
+    </div>
+
+
+
+
+    
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
 
-  <div class="field">
-    <%= form.label :phone_number %>
-    <%= form.telephone_field :phone_number %>
+<div class="row" align="center" style="margin-top: 20%">
+  <div class="col s12">
+    <%= form.submit "Submit", class: "btn waves-effect waves-light", :style => "background-color: white; color: black; margin-top: 10px; width:23%;" %>
   </div>
+</div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :city %>
-    <%= form.text_field :city %>
-  </div>
-
-  <div class="field">
-    <%= form.label :state %>
-    <%= form.text_field :state %>
-  </div>
-
-  <div class="field">
-    <%= form.label :zip %>
-    <%= form.text_field :zip %>
-  </div>
-
-  <div class="field">
-    <%= form.label :country %>
-    <%= form.text_field :country %>
-  </div>
-
-  <div class="field">
-    <%= form.label :shoe_size %>
-    <%= form.select :shoe_size, ['One Time', 'Weekly', 'Bi-Weekly', 'Monthly'] %>
-  </div>
-
-  <div class="field">
-    <%= form.label :shoe_type %>
-    <%= form.select :shoe_type, ['One Time', 'Weekly', 'Bi-Weekly', 'Monthly'] %>
-  </div>
-
-  <div class="field">
-    <%= form.label :shoe_model %>
-    <%= form.text_field :shoe_model %>
-  </div>
-
-  <div class="field">
-    <%= form.label :service_type %>
-    <%= form.select :service_type, ['One Time', 'Weekly', 'Bi-Weekly', 'Monthly'] %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :front_picture %>
-    <%= form.file_field :front_picture %>
-  </div>
-
-  <div class="field">
-    <%= form.label :back_picture %>
-    <%= form.file_field :back_picture %>
-  </div>
-
-  <div class="field">
-    <%= form.label :left_picture %>
-    <%= form.file_field :left_picture %>
-  </div>
-
-  <div class="field">
-    <%= form.label :right_picture %>
-    <%= form.file_field :right_picture %>
-  </div>
-
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

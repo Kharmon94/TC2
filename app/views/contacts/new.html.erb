@@ -1,5 +1,86 @@
-<h1>New Contact</h1>
 
-<%= render 'form', contact: @contact %>
+<script type="text/javascript">
+    $(document).ready(function(){    
+        //Check if the current URL contains '#'
+        if(document.URL.indexOf("#")==-1){
+            // Set the URL to whatever it was plus "#".
+            url = document.URL+"#";
+            location = "#";
 
-<%= link_to 'Back', contacts_path %>
+            //Reload the page
+            location.reload(true);
+        }
+    });
+</script>
+
+<div class="container">
+	
+
+
+	<div class="col s12" align="center">
+		<div data-aos="fade-in" data-aos-duration="3000">
+			<img src="https://takecareassets.s3.amazonaws.com/takecare_black_background.png" style="width: 500px; height: auto; margin-top: 1%">
+		</div>
+	</div>
+
+
+
+	<div class="row" style="margin-top: 15%; margin-bottom: 25%">
+		<div class="col s5" align="left" style="margin-bottom: 15%" data-aos="fade-right" data-aos-duration="2500">
+			<img src="https://takecareassets.s3.amazonaws.com/restoration.png" style="width: 200px; height: auto; margin-top: 5%; ">
+		</div>
+		<div class="row">
+			<div class="col s12" align="center">
+				<div class="carousel carousel-slider" style="height: 400px;" data-aos="fade-up" data-aos-duration="2500">
+					<a class="carousel-item" style="width: 300px; height: 300px; color: white"><img src="https://takecareassets.s3.amazonaws.com/restorations/6redb.jpg"> Before</a>	
+					<a class="carousel-item" style="width: 300px; height: 350px; color: white"><img src="https://takecareassets.s3.amazonaws.com/restorations/6reda.jpg"> After</a>
+					<a class="carousel-item" style="width: 300px; height: 300px; color: white"><img src="https://takecareassets.s3.amazonaws.com/restorations/bblackb.jpg">Before</a>
+					<a class="carousel-item" style="width: 300px; height: 300px; color: white"><img src="https://takecareassets.s3.amazonaws.com/restorations/bblacka.jpg">After</a>
+					<a class="carousel-item" style="width: 300px; height: 300px; color: white"><img src="https://takecareassets.s3.amazonaws.com/restorations/bgreyb.jpg">Before</a>
+					<a class="carousel-item" style="width: 300px; height: 300px; color: white"><img src="https://takecareassets.s3.amazonaws.com/restorations/bgreya.jpg">After</a>
+					<a class="carousel-item" style="width: 300px; height: 300px; color: white"><img src="https://takecareassets.s3.amazonaws.com/restorations/borangeb.jpg">Before</a>
+					<a class="carousel-item" style="width: 300px; height: 300px; color: white"><img src="https://takecareassets.s3.amazonaws.com/restorations/borangea.jpg">After</a>
+					<a class="carousel-item" style="width: 300px; height: 300px; color: white"><img src="https://takecareassets.s3.amazonaws.com/restorations/spinkb.jpg">Before</a>
+					<a class="carousel-item" style="width: 300px; height: 300px; color: white"><img src="https://takecareassets.s3.amazonaws.com/restorations/spinka.jpg">After</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row" style="margin-top: 10%; margin-bottom: 25%">
+		<div class="col s5" align="left" style="margin-bottom: 15%" data-aos="fade-right" data-aos-duration="2500">
+			<img src="https://takecareassets.s3.amazonaws.com/contact_customs.png" style="width: 200px; height: auto; margin-top: 1%">
+		</div>
+		<div class="row">
+			<div class="col s12" align="center">
+				<div class="carousel carousel-slider" style="height: 400px" data-aos="fade-up" data-aos-duration="2500">
+					    <a class="carousel-item" style="width: 300px; height: 300px"><img src="https://takecareassets.s3.amazonaws.com/customs/bapew.jpg"></a>	
+					    
+					    <a class="carousel-item" style="width: 300px; height: 300px"><img src="https://takecareassets.s3.amazonaws.com/customs/bapef.jpg"></a>
+					   <a class="carousel-item" style="width: 300px; height: 300px"><img src="https://takecareassets.s3.amazonaws.com/customs/1orange.jpg"></a> 
+					    <a class="carousel-item" style="width: 300px; height: 300px"><img src="https://takecareassets.s3.amazonaws.com/customs/canada.jpg"></a>
+					    <a class="carousel-item" style="width: 300px; height: 300px"><img src="https://takecareassets.s3.amazonaws.com/customs/1butter.jpg"></a>
+					    <a class="carousel-item" style="width: 300px; height: 300px"><img src="https://takecareassets.s3.amazonaws.com/customs/cookie.jpg"></a>
+					    <a class="carousel-item" style="width: 300px; height: 300px"><img src="https://takecareassets.s3.amazonaws.com/customs/van3m.jpg"></a>
+					    <a class="carousel-item" style="width: 300px; height: 300px"><img src="https://takecareassets.s3.amazonaws.com/customs/orangeg.jpg"></a>
+					    
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row" style="margin-top: 10%; margin-bottom: 10%">
+		<div class="col s12" align="center">
+			<img src="https://takecareassets.s3.amazonaws.com/contact_care.png" style="width: 250px; height: auto; margin-top: 1%" data-aos="fade-in" data-aos-duration="2500">
+		</div>
+	</div>
+
+	<div class="row" data-aos="fade-up" data-aos-duration="2500">
+		<%= render 'form', contact: @contact %>
+	</div>
+
+	
+
+</div>

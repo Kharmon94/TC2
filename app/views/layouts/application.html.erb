@@ -9,49 +9,35 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
     <script src="https://checkout.stripe.com/checkout.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script type="text/javascript">
+    $(document).ready(function(){    
+        //Check if the current URL contains '#'
+        if(document.URL.indexOf("#")==-1){
+            // Set the URL to whatever it was plus "#".
+            url = document.URL+"#";
+            location = "#";
+
+            //Reload the page
+            location.reload(true);
+        }
+    });
+    </script>
+
+
   </head>
 
   <body>
-        <header style="background-color: white; border: none;">
 
-          <nav id="nav" style="margin-bottom: 5%; background-color: white">
+    <%= render 'partials/nav' %>
 
-                <div class="nav-wrapper">
-                  <a href="#!" class="brand-logo" style="background-color:rgba(0, 0, 0, 0.0);"><%= image_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png', :style => 'width: 70px; height: auto; ' %></a>
-                  <a href="/" data="no-turbolink" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style="color: black">menu</i></a>
-                  <ul class="right hide-on-med-and-down">
-
-                          <li ><%=link_to 'Home', root_path, :style => "text-decoration: none; color: black;" %></li>
-
-                          <li ><%=link_to 'News & Updates', posts_path, :style => "text-decoration: none; color: black;" %></li>
-
-                          <li ><%=link_to 'Shop', spree_path, :style => "text-decoration: none; color: black;" %></li>                          
-                          <li ><%=link_to 'About', pages_about_path, :style => "text-decoration: none; color: black;" %></li>
-
-                          <li ><%=link_to 'Contact', new_contact_path, :style => "text-decoration: none; color: black;" %></li>
-
-                      
-                  </ul>
-                </div>
-          
-
-                <ul class="sidenav" id="mobile-demo" style="color: black">
-                          <li ><%=link_to 'Home', root_path, :style => "text-decoration: none; color: black;" %></li>
-
-                          <li ><%=link_to 'News & Updates', posts_path, :style => "text-decoration: none; color: black;" %></li> 
-
-                          <li ><%=link_to 'Shop', spree_path, :style => "text-decoration: none; color: black;" %></li>
-
-                          <li ><%=link_to 'About', pages_about_path, :style => "text-decoration: none; color: black;" %></li>
-
-                          <li ><%=link_to 'Contact', new_contact_path, :style => "text-decoration: none; color: black;" %></li>
-                </ul>
-
-          </nav>
-
-     
-    </header>
     <%= yield %>
+
+    <%= render 'partials/footer' %>
   </body>
 </html>

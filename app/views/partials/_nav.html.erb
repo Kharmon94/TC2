@@ -1,0 +1,41 @@
+    <header style="background-color: black; border: none;">
+
+          <nav id="nav" style="margin-bottom: 5%; background-color: white" data-aos="fade-down" data-aos-duration="2500">
+
+                <div class="nav-wrapper">
+                  <a href="" class="brand-logo" style="background-color:rgba(0, 0, 0, 0.0);"><img src="https://takecareassets.s3.amazonaws.com/tc_nav.png" style="width: 215px; height: auto; margin-top: -6.5%"></a>
+                  <a href="#!" data="no-turbolink" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" style="color: black">menu</i></a>
+                  <ul class="right hide-on-med-and-down">
+
+                          <li ><%=link_to image_tag("https://takecareassets.s3.amazonaws.com/home.png", :class => "nav_home", :style => "width: 85px; height: auto; margin-top: 16%;"), root_path %>
+                          </li>
+
+                          <li ><%=link_to image_tag("https://takecareassets.s3.amazonaws.com/news.png", :class => "nav_news", :style => "width: 90px; height: auto; margin-top: 16%;"), posts_path %></li>
+
+                          <li ><%=link_to image_tag("https://takecareassets.s3.amazonaws.com/shop.png", :class => "nav_shop", :style => "width: 85px; height: auto; margin-top: 16%;"), spree_path %></li>
+
+                          <li ><%=link_to image_tag("https://takecareassets.s3.amazonaws.com/about.png", :class => "nav_about", :style => "width: 85px; height: auto; margin-top: 16%;"), pages_about_path %></li>
+
+                          <li ><%=link_to image_tag("https://takecareassets.s3.amazonaws.com/request.png", :class => "nav_request", :style => "width: 90px; height: auto; margin-top: 16%;"), new_contact_path %></li>
+
+                      
+                  </ul>
+                </div>
+          
+
+                <ul class="sidenav" id="mobile-demo" style="color: black">
+                          <li ><%=link_to 'Home', root_path, :style => "text-decoration: none; color: black;" %></li>
+
+                          <li ><%=link_to 'News & Updates', posts_path, :style => "text-decoration: none; color: black;" %></li> 
+
+                          <li ><%=link_to 'Shop', spree_path, :style => "text-decoration: none; color: black;" %></li>
+
+                          <li ><%=link_to 'About', pages_about_path, :style => "text-decoration: none; color: black;" %></li>
+
+                          <li ><%=link_to 'Care Request', new_contact_path, :style => "text-decoration: none; color: black;" %></li>
+                </ul>
+
+          </nav>
+
+     
+    </header>

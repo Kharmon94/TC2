@@ -22,6 +22,7 @@ gem 'activeadmin'
 gem 'materialize-sass'
 gem 'mini_racer'
 gem "active_material", github: "vigetlabs/active_material"
+gem 'country_select', '~> 4.0'
 
 
 # Images

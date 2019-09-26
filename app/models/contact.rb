@@ -11,6 +11,7 @@ class Contact < MailForm::Base
   attribute :country, :validate => true
   attribute :shoe_type, :validate => true
   attribute :shoe_size, :validate => true
+  attribute :gender, :validate => true
   attribute :shoe_model, :validate => true
   attribute :service_type, :validate => true
   attributes :front_picture, :attachment => true

@@ -1,0 +1,45 @@
+    <!-- Footer -->
+    <footer class="footer" style="background-color: white; height: auto; width: 100%; padding: 3%; color: black; border-radius: 10px; opacity: 0.9; margin-top: 25%;">
+
+    	<div class="row">
+        	<div class="col s6" >
+    	    	 <h4 align="center">
+    	    		Links:
+    	    	</h4>
+    			<ul align="center" style="list-style-type: none;">
+    				<li><%= link_to "Home", root_path, style: "color: black;" %></li>
+                    <li><%=link_to 'News & Update', posts_path, :style => "text-decoration: none; color: black;" %></li>
+                    <li><%=link_to 'Shop', spree_path, :style => "text-decoration: none; color: black;" %></li>
+    				<li><%= link_to "About Us", pages_about_path, style: "color: black;" %></li>
+    				<li><%=link_to 'Care Request', new_contact_path, :style => "text-decoration: none; color: black;" %></li>
+                    
+    				
+    			</ul>
+
+    			<br>
+    			<br>
+
+
+    			 
+        	</div>
+
+        	<div class="col s6">
+        		<h4 align="center">
+        			Social Media:
+        		</h4>
+
+        		<ul align="center" style="list-style-type: none;">
+        			<li><a style="background-color: pink; color: black;" href="https://instagram.com/robbyrob168?igshid=dqug1ojiq9m1" target="_blank" class="waves-effect waves-light btn-floating btn-large social instagram"> <i class="fa fa-instagram"></i>Instagram</a></li>
+                    
+        		</ul>
+        	</div>
+    	</div>
+
+	
+
+    	<div class="row" align="center">
+				<h5>Copyright © 2019</h5>
+    	</div>
+
+
+    </footer>
