@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :contacts
   mount Spree::Core::Engine, at: '/store'
    get 'pages/about'
+   get 'pages/home'
    root to: "pages#home"
 end
