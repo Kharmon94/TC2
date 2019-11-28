@@ -31,12 +31,15 @@ gem 'aws-sdk-s3', require: false
 gem 'activestorage-validator'
 
 # stripe
-gem "stripe", '~> 4.7.0'
+gem "stripe"
 
 #spree
 gem 'spree', '~> 3.7.0'
-gem 'spree_auth_devise', '~> 3.5'
-gem 'spree_gateway', '~> 3.4'
+gem 'spree_auth_devise', '~> 3.4'
+gem 'spree_gateway', '~> 3.3'
+# gem 'spree', '~> 4.0'
+# gem 'spree_auth_devise', '~> 4.0'
+# gem 'spree_gateway', '~> 3.6'
 
 # keysstore
 gem "figaro"
