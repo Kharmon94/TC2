@@ -8,6 +8,13 @@ class PostsController < InheritedResources::Base
 	# 	@posts = Post.with_attached_images.find(params[:id])
 	# end
 
+  def destroy
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_to post_url, notice: 'Business was successfully deleted.' }
+      format.json { head :no_content }
+    end
+  end
 
 
   private

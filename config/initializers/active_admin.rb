@@ -54,8 +54,8 @@ ActiveAdmin.setup do |config|
   #
   # This setting changes the method which Active Admin calls
   # within the application controller.
-  # config.authentication_method = :authenticate_admin_user!
-  config.authentication_method = false
+  config.authentication_method = :authenticate_admin_user!
+ # config.authentication_method = false
   # == User Authorization
   #
   # Active Admin will automatically call an authorization
