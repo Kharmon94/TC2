@@ -1,7 +1,7 @@
 ActiveAdmin.register Post do
 
 
-  permit_params :title, :subtitle, :description, :images, :headline_picture
+  permit_params :title, :subtitle, :description, :images, :headline_picture, :id
 
   filter :title, :as => :string
   filter :subtitle, :as => :string

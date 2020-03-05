@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   resources :posts
   resources :contacts
-  mount Spree::Core::Engine, at: '/store'
+  mount Spree::Core::Engine, at: '/shop'
    get 'pages/about'
    get 'pages/home'
    root to: "pages#home"
