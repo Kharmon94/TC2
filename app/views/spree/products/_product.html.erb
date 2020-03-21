@@ -5,11 +5,16 @@
       <div class="panel-body text-center product-body">
         <%= link_to url, itemprop: "url" do %>
           <%= small_image(product, itemprop: "image") %><br/>
-          <%= content_tag(:span, truncate(product.name, length: 50), class: 'info', itemprop: "name", title: product.name) %>
         <% end %>
         <br/>
       </div>
       <div class="panel-footer text-center">
+        <div>
+          <%= link_to url, itemprop: "url" do %>
+            <%= content_tag(:span, truncate(product.name, length: 50), class: 'info', style: 'color: black', itemprop: "name", title: product.name) %>
+          <% end %>
+        </div>
+        
         <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
           <span class="price selling lead" itemprop="price" content="<%= (product.price_in(current_currency).amount.nil?)? 0 : product.price_in(current_currency).amount.to_d %>">
             <%= display_price(product) %>
