@@ -2,6 +2,55 @@
 <title>Take Care</title>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+
+    <style>
+      /* width */
+      ::-webkit-scrollbar {
+          width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px lightgrey; 
+          border-radius: 10px;
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+          background: darkgrey; 
+          
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+          background: white; 
+      }
+
+       /* Fade in */
+        .animate-bottom {
+          position: relative;
+          -webkit-animation-name: animatebottom;
+          -webkit-animation-duration: 1s;
+          animation-name: animatebottom;
+          animation-duration: 1s
+        }
+
+        @-webkit-keyframes animatebottom {
+          from { bottom:-100px; opacity:0 } 
+          to { bottom:0px; opacity:1 }
+        }
+
+        @keyframes animatebottom { 
+          from{ bottom:-100px; opacity:0 } 
+          to{ bottom:0; opacity:1 }
+        }
+
+        #myDiv {
+          display: none;
+          text-align: center;
+        }
+    </style>
+
 <%== meta_data_tags %>
 <%= canonical_tag(current_store.url) %>
 <%= favicon_link_tag asset_path('logo.png'), :rel => 'icon', :type =>  'image/png' %>
