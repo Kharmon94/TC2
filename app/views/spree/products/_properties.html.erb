@@ -1,10 +1,11 @@
 <% unless @product_properties.blank? %>  
-  <h3 class="product-section-title"><%= Spree.t('properties')%></h3>
-  <table id="product-properties" class="table table-striped" data-hook>
+  <!-- <h3 class="product-section-title" style="color: white"><#%= Spree.t('properties')%></h3> -->
+  <img src="https://takecareassets.s3.amazonaws.com/in_stock.png" style="width: 35%; height: auto; margin-bottom: 10%;">
+  <table id="product-properties" class="table" data-hook>
     <tbody>
       <% @product_properties.each do |product_property| %>
         <% css_class = cycle('even', 'odd', name: "properties") %>
-        <tr class="<%= css_class %>">
+        <tr class="<%= css_class %>" style="color: white">
           <td><strong><%= product_property.property.presentation %></strong></td>
           <td><%= product_property.value %></td>
         </tr>
