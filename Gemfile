@@ -34,7 +34,7 @@ gem 'activestorage-validator'
 gem "stripe"
 
 #spree
-gem 'spree', '~> 3.7.0'
+gem 'spree', '~> 3.7.11'
 gem 'spree_auth_devise', '~> 3.4'
 gem 'spree_gateway', '~> 3.3'
 # gem 'spree', '~> 4.0'
